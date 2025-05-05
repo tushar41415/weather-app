@@ -206,13 +206,32 @@ function App() {
               <div key={i} className="card p-2 shadow-sm text-center" style={{ minWidth: "100px", backgroundColor: "rgba(30,41,59,0.75)" }}>
                 <h6 className="text-light">{new Date(day.dt_txt).toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' })}</h6>
                 <img src={`http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`} alt="icon" />
-                <p className="mb-0 fw-bold text-light">{Math.round(day.main.temp)}°C</p>
-                <small className="text-capitalize text-light">{day.weather[0].description}</small>
+                <h5 className={`fw-bold ${getTempColor(day.main.temp)}`}>{day.main.temp}°C</h5>
+                <p className="text-light">{day.weather[0].description}</p>
               </div>
             ))}
           </div>
         </div>
       )}
+
+      {/* Footer Section */}
+      <footer className="footer-container">
+        <div className="footer-content">
+          <h5 className="footer-title">Contact Us</h5>
+          <p>Made by Tushar Sharma</p>
+          <p>Email: tushar@example.com</p>
+          <p>Phone: +91 1234567890</p>
+          <p>Address: Your Address, City</p>
+          <div className="footer-links">
+            <a href="#" className="footer-link">Privacy Policy</a> |
+            <a href="#" className="footer-link">Terms of Service</a>
+          </div>
+          <p className="footer-social">
+            <a href="#" className="footer-social-icon">🔗</a>
+            <a href="#" className="footer-social-icon">💬</a>
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
