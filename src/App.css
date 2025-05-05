@@ -1,0 +1,198 @@
+/* App.css */
+
+body {
+  background: linear-gradient(135deg, #1e3a8a, #0f172a);
+  background-attachment: fixed;
+  font-family: 'Quicksand', sans-serif;
+  color: #e0f2fe;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding-top: 40px;
+}
+
+.card {
+  background: rgba(30, 41, 59, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  color: #e0f2fe;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.input-group input.form-control {
+  border-radius: 8px 0 0 8px;
+  border: 1px solid #60a5fa;
+  box-shadow: none;
+  background-color: #1e293b;
+  color: #e0f2fe;
+}
+
+.input-group input.form-control::placeholder {
+  color: #94a3b8;
+}
+
+.input-group button.btn {
+  border-radius: 0 8px 8px 0;
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+  color: #fff;
+}
+
+.input-group button.btn:hover {
+  background-color: #2563eb;
+}
+
+img {
+  height: 80px;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-weight: 600;
+  color: #e0f2fe;
+}
+
+/* Weather Backgrounds */
+
+/* Default if no match */
+.bg-clear {
+  background: linear-gradient(135deg, #3a6073, #16222a) !important;
+}
+
+.bg-clouds {
+  background: linear-gradient(135deg, #485563, #29323c) !important;
+}
+
+.bg-rain {
+  background: linear-gradient(135deg, #283e51, #485563) !important;
+}
+
+.bg-thunderstorm {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364) !important;
+}
+
+.bg-snow {
+  background: linear-gradient(135deg, #2c3e50, #bdc3c7) !important;
+}
+
+.bg-drizzle {
+  background: linear-gradient(135deg, #89f7fe, #66a6ff) !important;
+}
+
+.bg-mist,
+.bg-haze {
+  background: linear-gradient(135deg, #e0eafc, #cfdef3) !important;
+}
+
+.bg-dust {
+  background: linear-gradient(135deg, #b79891, #94716b) !important;
+}
+
+.bg-fog {
+  background: linear-gradient(135deg, #3a3a3a, #181818) !important;
+}
+
+.bg-smoke {
+  background: linear-gradient(135deg, #556270, #2c3e50) !important;
+}
+
+.bg-sand {
+  background: linear-gradient(135deg, #c79081, #dfa579) !important;
+}
+
+.bg-tornado {
+  background: linear-gradient(135deg, #000000, #434343) !important;
+}
+
+.bg-squall {
+  background: linear-gradient(135deg, #4b6cb7, #182848) !important;
+}
+
+.bg-mid {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af) !important;
+}
+
+/* App.css me add karo */
+
+/* General background layers */
+.bg-clear {
+  background: linear-gradient(to top, #87ceeb, #ffffff) !important;
+}
+
+.bg-rain {
+  background: #1e3a8a;
+  overflow: hidden;
+}
+
+.bg-snow {
+  background: #e0f7fa;
+  overflow: hidden;
+}
+
+.bg-clouds {
+  background: linear-gradient(to top, #90a4ae, #cfd8dc);
+  overflow: hidden;
+}
+
+/* Raindrop animation */
+.raindrop {
+  position: absolute;
+  width: 2px;
+  height: 15px;
+  background: #00f;
+  animation: rainFall 0.6s linear infinite;
+  opacity: 0.4;
+}
+
+@keyframes rainFall {
+  0% {
+    top: -20px;
+    opacity: 0.4;
+  }
+
+  100% {
+    top: 100vh;
+    opacity: 0;
+  }
+}
+
+/* Snowflake */
+.snowflake {
+  position: absolute;
+  color: #fff;
+  font-size: 1.2rem;
+  user-select: none;
+  animation: snowFall 5s linear infinite;
+}
+
+@keyframes snowFall {
+  0% {
+    top: -5%;
+    opacity: 1;
+  }
+
+  100% {
+    top: 100%;
+    transform: translateX(20px);
+    opacity: 0;
+  }
+}
